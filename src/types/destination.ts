@@ -62,6 +62,10 @@ export interface Destination {
   };
   courses: Course[];
   extendTip?: string;
+  /** 숙박 추천 (지역·유형) — src/data/logistics.ts에서 주입 */
+  stay?: string;
+  /** 예상 비용 (서울 출발 기준 대략) — src/data/logistics.ts에서 주입 */
+  cost?: string;
   images: string[];
   kakaoMapUrl: string;
   naverMapUrl?: string;

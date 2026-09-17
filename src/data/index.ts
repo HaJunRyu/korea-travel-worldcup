@@ -6,6 +6,7 @@ import { gyeongsang } from "./gyeongsang";
 import { jeju } from "./jeju";
 import { sudogwon } from "./sudogwon";
 import { destinationPhotos } from "./photos.generated";
+import { logistics } from "./logistics";
 
 // 수도권(서울·수원·가평·양평)은 후보에서 제외 (2026-09-15, 사용자 판단).
 // 기준: "마음먹고 떠나는 여행 목적지"가 아니라 생활권/근교 나들이 성격 — docs/PLAN.md 3.1.1
@@ -20,6 +21,12 @@ function withRealPhotos(d: Destination): Destination {
   return { ...d, images: photos.map((p) => p.url) };
 }
 
+/** 숙박·예상비용(logistics.ts)을 병합 */
+function withLogistics(d: Destination): Destination {
+  const l = logistics[d.id];
+  return l ? { ...d, stay: l.stay, cost: l.cost } : d;
+}
+
 /** 1차 팩: 국내 여행지 (전국). 이후 심화편 팩은 여기에 추가 — docs/PLAN.md 3.1 */
 export const koreaCup: Cup = {
   id: "korea",
@@ -31,7 +38,9 @@ export const koreaCup: Cup = {
     ...gyeongsang,
     ...jeju,
     ...ganghwado,
-  ].map(withRealPhotos),
+  ]
+    .map(withRealPhotos)
+    .map(withLogistics),
 };
 
 /** 우승지 등에 표기할 사진 크레딧(저작자·라이선스) — CC 라이선스 준수 */

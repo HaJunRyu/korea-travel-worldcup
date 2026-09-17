@@ -277,6 +277,25 @@ function ResultClient() {
           )}
         </Section>
 
+        {/* 숙박 & 예상 비용 */}
+        {(winner.stay || winner.cost) && (
+          <Section title="🏨 숙박 & 예상 비용">
+            {winner.stay && (
+              <Text fontSize="sm" color="gray.200">
+                <b>숙박</b> — {winner.stay}
+              </Text>
+            )}
+            {winner.cost && (
+              <Text fontSize="sm" color="gray.200">
+                <b>예상 비용</b> — {winner.cost}
+              </Text>
+            )}
+            <Text fontSize="2xs" color="gray.500">
+              비용은 서울 출발·2인 기준의 대략치예요. 시즌·예약에 따라 달라질 수 있어요.
+            </Text>
+          </Section>
+        )}
+
         {/* 왜 가야 하나 */}
         <Section title="💡 왜 여기냐면">
           {winner.whyGo.map((w) => (

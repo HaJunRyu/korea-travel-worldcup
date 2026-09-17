@@ -372,6 +372,16 @@ export function SetupForm() {
       >
         월드컵 시작하기 →
       </Button>
+      <Button
+        variant="ghost"
+        size="sm"
+        color="gray.400"
+        fontWeight="medium"
+        _hover={{ bg: "whiteAlpha.100", color: "gray.200" }}
+        onClick={() => router.push("/destinations")}
+      >
+        여행지 {koreaCup.destinations.length}곳 목록 둘러보기 →
+      </Button>
       <Text fontSize="xs" color="gray.500" textAlign="center">
         타이머는 없어요. 천천히 비교하고 고민해서 고르세요 — 중간에 나가도 이어할 수 있어요.
       </Text>
