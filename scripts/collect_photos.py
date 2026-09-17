@@ -12,6 +12,7 @@ QUERIES = {
     "chuncheon": ["Soyanggang Skywalk", "Gongjicheon Chuncheon", "Samaksan Cable Car", "Uiamho Chuncheon"],
     "yeosu": ["Dolsan Bridge Yeosu", "Yeosu Expo", "Odongdo Camellia", "Hyangiram"],
     "seosan": ["Ganwolam", "Haemieupseong", "Gaesimsa Seosan", "Cheonjangho Seosan"],
+    "heuksando-hongdo": ["Hongdo Island Korea", "Heuksando", "Hongdo Sinan", "Dadohaehaesang"],
     # 필요시 다른 여행지 검색어도 여기에 추가
 }
 

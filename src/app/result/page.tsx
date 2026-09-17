@@ -32,7 +32,7 @@ import {
 import { roundLabel } from "@/lib/tournament";
 import { analyzeTaste } from "@/lib/taste";
 import { TasteReport } from "@/components/TasteReport";
-import { Glass, GRADIENT_CTA, GLOW_CTA } from "@/components/ui/glass";
+import { Glass, GRADIENT_CTA, GLOW_CTA, BLUR_FALLBACK } from "@/components/ui/glass";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -128,6 +128,8 @@ function ResultClient() {
             fill
             sizes="(max-width: 768px) 100vw, 512px"
             style={{ objectFit: "cover" }}
+            placeholder="blur"
+            blurDataURL={winner.imageBlurs?.[0] ?? BLUR_FALLBACK}
             priority
           />
           <Box

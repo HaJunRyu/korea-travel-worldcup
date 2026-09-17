@@ -15,7 +15,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { koreaCup } from "@/data";
-import { SCRIM_BOTTOM, GRADIENT_BRAND } from "@/components/ui/glass";
+import { SCRIM_BOTTOM, GRADIENT_BRAND, BLUR_FALLBACK } from "@/components/ui/glass";
 
 export default function DestinationsPage() {
   const router = useRouter();
@@ -66,6 +66,8 @@ export default function DestinationsPage() {
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   style={{ objectFit: "cover" }}
+                  placeholder="blur"
+                  blurDataURL={d.imageBlurs?.[0] ?? BLUR_FALLBACK}
                 />
                 <Box position="absolute" inset="0" bgImage={SCRIM_BOTTOM} />
                 <Badge

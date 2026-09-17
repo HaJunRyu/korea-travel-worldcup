@@ -116,6 +116,10 @@ export const logistics: Record<string, Logistics> = {
     stay: "증도 엘도라도리조트, 자은도·퍼플섬 인근 펜션",
     cost: "2박 3일 2인 약 45~65만원 (KTX+렌터카·숙박·식사)",
   },
+  "heuksando-hongdo": {
+    stay: "홍도·흑산도 마을 민박·펜션 (숙소 폭이 좁아 예약 필수)",
+    cost: "2박 3일 2인 약 50~70만원 (KTX+쾌속선 왕복·숙박·식사)",
+  },
   // 경상
   busan: {
     stay: "해운대·광안리 오션뷰 호텔, 서면 게스트하우스",

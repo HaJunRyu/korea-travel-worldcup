@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import type { Destination } from "@/types/destination";
 import { photoCredits } from "@/data";
-import { Glass, GRADIENT_CTA, GLOW_CTA } from "@/components/ui/glass";
+import { Glass, GRADIENT_CTA, GLOW_CTA, BLUR_FALLBACK } from "@/components/ui/glass";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -65,6 +65,8 @@ export function DestinationDetail({ destination: d }: { destination: Destination
             fill
             sizes="(max-width: 768px) 100vw, 512px"
             style={{ objectFit: "cover" }}
+            placeholder="blur"
+            blurDataURL={d.imageBlurs?.[0] ?? BLUR_FALLBACK}
             priority
           />
           <Box

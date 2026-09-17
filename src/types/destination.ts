@@ -67,6 +67,8 @@ export interface Destination {
   /** 예상 비용 (서울 출발 기준 대략) — src/data/logistics.ts에서 주입 */
   cost?: string;
   images: string[];
+  /** 각 이미지의 blur placeholder(base64) — photos.generated.ts에서 index.ts가 주입 */
+  imageBlurs?: (string | undefined)[];
   kakaoMapUrl: string;
   naverMapUrl?: string;
 }

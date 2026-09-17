@@ -97,7 +97,7 @@ export function DestinationCard({ destination: d, settings, onSelect, onDetail }
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             placeholder="blur"
-            blurDataURL={BLUR_FALLBACK}
+            blurDataURL={d.imageBlurs?.[i] ?? BLUR_FALLBACK}
             priority={i === 0}
             loading={i === 0 ? undefined : "eager"}
             style={{

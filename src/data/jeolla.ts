@@ -693,4 +693,56 @@ export const jeolla: Destination[] = [
     kakaoMapUrl: kakaoMap("신안 퍼플섬"),
     naverMapUrl: naverMap("신안 여행"),
   },
+  {
+    id: "heuksando-hongdo",
+    name: "흑산도·홍도",
+    area: "전라",
+    themes: ["바다", "자연"],
+    tagline: "다도해 서남쪽 끝, 붉은 절벽의 두 섬",
+    whyGo: [
+      "홍도 유람선에서 보는 33경 기암절벽은 다도해 최고의 해상 절경으로 꼽혀요.",
+      "흑산도 일주도로와 상라산 전망대에선 점점이 흩어진 다도해 섬들이 한눈에 들어와요.",
+      "가는 길이 멀고 배를 타야 하는 만큼, 다녀오면 오래 남는 섬 여행이 돼요.",
+    ],
+    highlights: [
+      { name: "홍도 유람선(33경)", description: "붉은 기암과 해식동굴을 도는 두 시간 남짓 해상 유람" },
+      { name: "홍도 깃대봉", description: "섬 정상까지 오르는 트레킹 — 다도해 조망이 일품" },
+      { name: "흑산도 상라산 전망대", description: "일주도로 정상에서 보는 다도해 파노라마" },
+      { name: "흑산도 사리마을", description: "정약전이 『자산어보』를 집필한 유배지 마을" },
+    ],
+    food: [
+      { name: "홍어삼합", description: "흑산도 홍어의 본고장 — 삭힌 홍어의 정수" },
+      { name: "우럭·전복 요리", description: "청정 해역의 자연산 해산물" },
+    ],
+    seasonalTips: [
+      { months: [5, 6], note: "바다가 잔잔하고 맑아 유람선·입도 확률이 높은 시기", peak: true },
+      { months: [9, 10], note: "선선한 가을 바다와 깃대봉 트레킹" },
+      { months: [12, 1, 2], note: "겨울 풍랑으로 여객선 결항이 잦아요 — 일정 여유 필수" },
+    ],
+    festivals: [],
+    access: {
+      car: { time: "목포까지 약 4시간 + 여객선", note: "섬 안은 유람선·마을버스" },
+      transit: {
+        summary: "KTX 목포역 약 2시간 30분 + 쾌속선 흑산도 약 2시간·홍도 약 2시간 20분",
+        quality: "불편",
+      },
+      localMobility: "대중교통 보통",
+    },
+    tripFit: { dayTrip: "불가", recommendedNights: "2박 3일 이상" },
+    courses: [
+      {
+        duration: "1박 2일",
+        plan: [
+          "1일차 — 목포에서 쾌속선, 홍도 입도 후 유람선 33경",
+          "1일차 저녁 — 홍도 마을에서 해산물과 노을",
+          "2일차 — 흑산도로 이동, 일주도로와 상라산 전망대",
+          "2일차 오후 — 목포행 배로 귀환 (기상 변수 감안)",
+        ],
+      },
+    ],
+    extendTip: "하루 더 있다면 홍도 깃대봉 트레킹이나 흑산도 사리마을까지 — 2박 3일이 안정적이에요.",
+    images: placeholderImages("heuksando-hongdo"),
+    kakaoMapUrl: kakaoMap("홍도 흑산도"),
+    naverMapUrl: naverMap("흑산도 홍도 여행"),
+  },
 ];

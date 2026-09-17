@@ -18,7 +18,11 @@ const ganghwado = sudogwon.filter((d) => d.id === "ganghwado");
 function withRealPhotos(d: Destination): Destination {
   const photos = destinationPhotos[d.id];
   if (!photos?.length) return d;
-  return { ...d, images: photos.map((p) => p.url) };
+  return {
+    ...d,
+    images: photos.map((p) => p.url),
+    imageBlurs: photos.map((p) => p.blurDataURL),
+  };
 }
 
 /** 숙박·예상비용(logistics.ts)을 병합 */
